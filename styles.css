@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url('https://images.pexels.com/photos/415071/pexels-photo-415071.jpeg?cs=srgb&dl=pexels-pixabay-415071.jpg&fm=jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: 1600px 800px;
+}
+header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: transparent;
+}
+header.container {
+  height: 30vh;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  height: 60px;
+  width: 80px;
+}
+.logo p {
+  font-family: cursive;
+  font-size: 50px;
+  font-weight: 500;
+  cursor: default;
+}
+.a {
+  text-decoration: none;
+  color: aliceblue;
+  font-weight: bold;
+}
+ul {
+  display: flex;
+  gap: 14px;
+  list-style: none;
+  font-weight: bold;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px;
+  font-weight: bold;
+}
+.main {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+.content {
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin: auto;
+  position: absolute;
+  top: 150px;
+  left: 800px;
+}
+.content .container {
+  justify-content: center;
+  width: 300px;
+  height: 100%;
+  flex-direction: column;
+  margin: auto;
+  display: flex;
+}
+.todo {
+  cursor: url('cur.png'), auto;
+  padding: 14px;
+}
+.todo_value {
+  cursor: inherit;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: medium;
+  font-weight: bold;
+  flex-grow: 1;
+  border-bottom: 2px solid rgb(94, 41, 21);
+}
+.todo_checkbox {
+  cursor: inherit;
+}
+.todo:has(.todo_checkbox:checked) {
+  color: rgb(94, 41, 21);
+  text-decoration: line-through 1.5px;
+}
